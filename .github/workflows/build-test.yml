@@ -6,6 +6,9 @@ name: Build and test
 on:
   pull_request:
     branches: [ master ]
+    
+env:
+  DB_URI: ${{secret.DB_URI}}
 
 jobs:
   build:
